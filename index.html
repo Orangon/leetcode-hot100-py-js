@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hot 100 刷题</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232563eb'/><text x='50' y='70' font-size='52' text-anchor='middle' fill='white' font-family='monospace'>LC</text></svg>">
+  <script>
+    // 首屏渲染前应用主题，避免闪烁；同步更新主题按钮的可访问名称。
+    try {
+      document.documentElement.dataset.theme = localStorage.getItem('hot100_theme_v1') || 'light';
+    } catch (e) {}
+    document.addEventListener('DOMContentLoaded', function () {
+      var updateThemeName = function () {
+        var button = document.querySelector('.theme-toggle');
+        if (!button) return;
+        var dark = document.documentElement.dataset.theme === 'dark';
+        var label = dark ? '切换到亮色主题' : '切换到暗色主题';
+        button.title = label;
+        button.setAttribute('aria-label', label);
+      };
+      updateThemeName();
+      new MutationObserver(updateThemeName).observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['data-theme']
+      });
+    });
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/views-extras.css">
+</head>
+<body>
+  <a class="skip-link" href="#app">跳到主要内容</a>
+  <main id="app" tabindex="-1"></main>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
