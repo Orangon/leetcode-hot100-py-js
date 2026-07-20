@@ -90,6 +90,7 @@ export function renderProblem(container, problem) {
         ${problem.tags
           .map((t) => `<a class="tag" href="${articleByTag.has(t) ? `#/knowledge/${articleByTag.get(t)}` : '#/knowledge'}" aria-label="查看与 ${escapeHtml(t)} 相关的知识">${escapeHtml(t)}</a>`)
           .join('')}
+        <a class="lc-link" href="https://leetcode.cn/problems/${encodeURIComponent(problem.slug)}/" target="_blank" rel="noopener noreferrer" title="在力扣官网查看本题（新标签页打开）">力扣原题 ↗</a>
       </div>
       <div class="spacer"></div>
       <div class="seg" id="mode-seg" role="group" aria-label="代码模式">
