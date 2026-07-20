@@ -54,3 +54,8 @@
 ```bash
 npm test   # manifest 检查 + 单元测试 + 100 题四套参考答案全量校验
 ```
+
+## 免责声明
+
+- 本项目为个人学习用途的非官方项目，与 LeetCode / 力扣 无任何隶属或授权关系；"LeetCode" 及相关题目内容（题名、题面、示例）的版权归 LeetCode 所有，仅作个人学习参考，请勿用于商业用途。如有版权问题请联系删除。
+- 项目自有代码以 [MIT License](LICENSE) 发布；`vendor/` 内第三方组件（Monaco Editor、Pyodide）的许可见其各自的声明文件 [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)。
