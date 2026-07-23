@@ -1,4 +1,4 @@
-// 知识补充列表页：按主题分类的基础知识文章（按推荐学习顺序排列）
+// 知识库列表页：按主题分类的基础知识文章（按推荐学习顺序排列）
 
 import { articles } from '../../knowledge/index.js';
 import { problems } from '../../problems/index.js';
@@ -66,7 +66,7 @@ export function renderKnowledge(container) {
   container.innerHTML = `
     ${topbarHtml('knowledge')}
     <div class="mistakes-head">
-      <h2>知识补充</h2>
+      <h2>知识库</h2>
     </div>
     <p class="knowledge-intro">按推荐顺序学习：每一步讲清「是什么、什么时候用、怎么写」。运行示例可编辑、预测并保存草稿，读完文章后再用关联题巩固。</p>
     <div class="kgrid">

@@ -109,7 +109,7 @@ async function route() {
     }
     if (hash === '#/knowledge') {
       const { renderKnowledge } = await import('./views/knowledge.js');
-      commitView(sequence, `知识补充 · ${BASE_TITLE}`, () => renderKnowledge(app));
+      commitView(sequence, `知识库 · ${BASE_TITLE}`, () => renderKnowledge(app));
       return;
     }
 

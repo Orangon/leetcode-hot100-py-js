@@ -1,4 +1,4 @@
-// 知识补充详情页：文章正文、可编辑运行示例与关联题目
+// 知识库详情页：文章正文、可编辑运行示例与关联题目
 
 import { articles } from '../../knowledge/index.js';
 import { md } from '../md.js';
@@ -96,7 +96,7 @@ export function renderKnowledgeDetail(container, article) {
 
   container.innerHTML = `
     <div class="phead">
-      <a class="back" href="#/knowledge">← 知识补充</a>
+      <a class="back" href="#/knowledge">← 知识库</a>
       <h1>${escapeHtml(article.title)}</h1>
       <div class="head-tags">${article.tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join('')}</div>
       <button class="btn" id="knowledge-status">${status === 'completed' ? '✓ 已完成' : '标记为已完成'}</button>

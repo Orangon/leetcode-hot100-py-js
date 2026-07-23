@@ -18,7 +18,7 @@ export function topbarHtml(active) {
       <nav class="nav" aria-label="主导航">
         <a href="#/" class="${active === 'list' ? 'active' : ''}"${current('list')}>题库</a>
         <a href="#/mistakes" class="${active === 'mistakes' ? 'active' : ''}"${current('mistakes')}>错题集${dueCount ? ` (${dueCount} 待复习)` : ''}</a>
-        <a href="#/knowledge" class="${active === 'knowledge' ? 'active' : ''}"${current('knowledge')}>知识补充</a>
+        <a href="#/knowledge" class="${active === 'knowledge' ? 'active' : ''}"${current('knowledge')}>知识库</a>
       </nav>
     </header>`;
 }
